@@ -8,6 +8,7 @@ const projectsRouter = require('../projects/projects-router.js');
 
 
 server.use('/api/projects', projectsRouter);
+server.use('/api/projects/:id/actions', projectsRouter);
 
 //may wand to add actions router!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
