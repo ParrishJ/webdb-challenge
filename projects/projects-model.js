@@ -21,7 +21,7 @@ function addProject(project) {
 function getActionsInProject(id) {
     return db('actions')
         .join('projects', 'projects.id', 'actions.project_id')
-        .select('actions.id', 'actions.actionDescription', 'actions.actionNotes', 'actions.actionCompleted')
+        .select('actions.id', 'actions.actionDescription as description', 'actions.actionNotes as notes', 'actions.actionCompleted as completed')
         .where('actions.project_id', id)
 }
 
